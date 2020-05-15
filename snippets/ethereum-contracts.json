@@ -1,0 +1,83 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	"ERC-20 contract": {
+		"scope": "solidity",
+		"prefix": "erc20",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";",
+			"",
+			"$0contract ${1:contract_name} is ERC20 {",
+			"    constructor() ERC20(\"${2:token_name}\", \"${3:token_symbol}\") public {",
+			"    }",
+			"}"
+		],
+		"description": "ERC-20 OpenZeppelin contract"
+	},
+	"ERC-721 contract": {
+		"scope": "solidity",
+		"prefix": "erc721",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";",
+			"",
+			"$0contract ${1:contract_name} is ERC721 {",
+			"    constructor() ERC721(\"${2:token_name}\", \"${3:token_symbol}\") public {",
+			"    }",
+			"}"
+		],
+		"description": "ERC-721 OpenZeppelin contract"
+	},
+	"ERC-777 contract": {
+		"scope": "solidity",
+		"prefix": "erc777",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/token/ERC777/ERC777.sol\";",
+			"",
+			"$0contract ${1:contract_name} is ERC777 {",
+			"    constructor() ERC777(\"${2:token_name}\", \"${3:token_symbol}\", new address[](0)) public {",
+			"    }",
+			"}"
+		],
+		"description": "ERC-777 OpenZeppelin contract"
+	},
+	"ERC1155 contract": {
+		"scope": "solidity",
+		"prefix": "erc1155",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/token/ERC1155/ERC1155.sol\";",
+			"",
+			"$0contract ${1:contract_name} is ERC1155 {",
+			"    constructor() ERC777(\"${2:token_name}\", \"${3:token_symbol}\", new address[](0)) public {",
+			"    }",
+			"}"
+		],
+		"description": "ERC1155 Multi Token Standard OpenZeppelin contract"
+	},
+	"Escrow contract": {
+		"scope": "solidity",
+		"prefix": "escrow",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/token/Payment/PullPayment.sol\";",
+			"",
+			"$0contract ${1:contract_name} is PullPayment {",
+			"    constructor() Payment(\"${2:token_name}\", \"${3:token_symbol}\", new address[](0)) public {",
+			"    }",
+			"}"
+		],
+		"description": "Escrow Contract related to sending and receiving payments. OpenZeppelin contract"
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"Access Control contract": {
+		"prefix": "access",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/access/AccessControl.sol\";",
+			"",
+			"$0contract ${1:MockContract} is AccessControl {",
+			"    constructor () public {",
+			"        _setupRole(${2:DEFAULT_ADMIN_ROLE}, _msgSender());",
+			"    }",
+			"",
+			"    function setRoleAdmin(bytes32 roleId, bytes32 adminRoleId) public {",
+			"        _setRoleAdmin(roleId, adminRoleId);",
+			"    }",
+			"}"
+		],
+		"description": "Access Control Contract"
+	},
+	"Arrays Implementation contract": {
+		"prefix": "array",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/utils/Arrays.sol\";",
+			"",
+			"$0contract ${1:ArraysImpln} {",
+			"    using Arrays for uint256[];",
+			"",
+			"    uint256[] private ${2:_array};",
+			"    constructor (uint256[] memory array) public {",
+			"        ${2:_array} = array;",
+			"    }",
+			"",
+			"    function findUpperBound(uint256 element) external view returns (uint256) {",
+			"        return _array.findUpperBound(element);",
+			"    }",
+			"}"
+		],
+		"description": "Arrays Implementation Contract"
+	},
+	"ECDSA contract": {
+		"prefix": "ecdsa",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import \"@openzeppelin/contracts/cryptography/ECDSA.sol\";",
+			"",
+			"$0contract ${1:ECDSAMock} {",
+			"    using ECDSA for bytes32;",
+			"",
+			"    function recover(bytes32 hash, bytes memory signature) public pure returns (address) {",
+			"        return hash.recover(signature);",
+			"    }",
+			"",
+			"    function toEthSignedMessageHash(bytes32 hash) public pure returns (bytes32) {",
+			"        return hash.toEthSignedMessageHash();",
+			"    }",
+			"}"
+		],
+		"description": "ECDSA Contract"
+	},
+	"MerkleProofWrapper contract": {
+		"prefix": "merkleProof",
+		"body": [
+			"pragma solidity ^0.6.0;",
+			"",
+			"import { MerkleProof } from \"@openzeppelin/contracts/cryptography/MerkleProof.sol\";",
+			"",
+			"$0contract ${1:MerkleProofWrapper} {",
+			"    function verify(bytes32[] memory proof, bytes32 root, bytes32 leaf) public pure returns (bool) {",
+			"        return MerkleProof.verify(proof, root, leaf);",
+			"    }",
+			"}"
+		],
+		"description": "MerkleProofWrapper Contract"
+	}
+}

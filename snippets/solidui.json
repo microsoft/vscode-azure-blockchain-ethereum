@@ -1,0 +1,48 @@
+{
+	"create a contract instance" : {
+		"prefix": "icontract",
+		"body" : [
+			"function AppName(Contract){",
+			"\t this.web3=null;",
+			"\t this.instance=null;",
+			"\t this.Contract=Contract;",
+			"}"
+		],
+		"description": "creates an instance of the smart contract"
+	},
+
+	"init AppName object and instance of web3js lib" : {
+		"prefix": "w3proto",
+		"body" : [
+			"AppName.prototype.init=function() {",
+			"\t this.web3 = new Web3(",
+			"\t\t (window.web3 && window.web3.currentProvider) ||",
+			"\t\t\t new Web3.providers.HttpProvider(this.Contract.endpoint)",
+			"\t );",
+			"\n",
+			"\t var contract_interface = this.web3.eth.contract(this.Contract.abi);",
+			"\t this.instance = this.Contract.address",
+			"\t\t ? contract_interface.at(this.Contract.address)",
+			"\t\t : { message: () => {} };",
+			"};"
+
+		],
+		"description": "init <AppName> obj and create web3j instance"
+	},
+
+	"html template" : {
+		"prefix": "solidui",
+		"body": [
+			"<!DOCTYPE html>",
+			"\t <head>",
+			"\t\t <script type='text/javascript' src='https://unpkg.com/jquery@3.3.1/dist/jquery.js'></script>",
+			"\t\t <script type='text/javascript' src='https://unpkg.com/web3@0.20.5/dist/web3.min.js'></script>",
+			"\t </head>",
+			"\t <body>",
+			"\t </body>",
+			"</html>"
+		],
+		"description": "creates a basic html template"
+	}
+
+}

@@ -1,6 +1,4 @@
-{
-	//Basic snippets for boilerplate code aiming at building a smart contract UI
-	
+{	
 	"html template" : {
 		"prefix": "solidui",
 		"body": [

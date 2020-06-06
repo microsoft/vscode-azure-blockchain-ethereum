@@ -549,7 +549,9 @@
     "tslint:fix": "npm run tslint -- --fix",
     "version": "tsc -v",
     "test": "npm run compile && node ./out/test/runTest",
-    "clean": "npx rimraf -- ./out/*"
+    "clean": "npx rimraf -- ./out/*",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@types/astring": "^1.3.0",
@@ -611,7 +613,8 @@
     "uuid": "^3.3.2",
     "vscode-azureextensionui": "^0.29.12",
     "vscode-extension-telemetry": "^0.1.1",
-    "solidity-parser-antlr": "^0.4.11"
+    "solidity-parser-antlr": "^0.4.11",
+    "snyk": "^1.336.0"
   },
   "extensionDependencies": [
     "JuanBlanco.solidity",
@@ -627,5 +630,6 @@
       "npx tslint -t verbose",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }

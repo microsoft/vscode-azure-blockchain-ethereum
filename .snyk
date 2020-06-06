@@ -1,0 +1,52 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@truffle/debug-utils > async > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > redux > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/provider > @truffle/interface-adapter > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - ms-rest-azure > async > lodash:
+        patched: '2020-06-06T20:24:33.061Z'
+    - request-promise > request-promise-core > lodash:
+        patched: '2020-06-06T20:24:33.061Z'
+    - vscode-azureextensionui > html-to-text > lodash:
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > @truffle/decode-utils > web3-eth-abi > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > remote-redux-devtools > redux-devtools-core > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > remote-redux-devtools > redux-devtools-instrument > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - azure-arm-resource > ms-rest-azure > async > lodash:
+        patched: '2020-06-06T20:24:33.061Z'
+    - vscode-azureextensionui > ms-rest-azure > async > lodash:
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > @truffle/decode-utils > web3-eth-abi > web3-utils > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > @truffle/decoder > @truffle/decode-utils > web3-eth-abi > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > @truffle/decoder > async-eventemitter > async > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > reselect-tree > esdoc > babel-generator > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > reselect-tree > esdoc > babel-traverse > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > reselect-tree > esdoc > cheerio > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - vscode-azureextensionui > azure-arm-resource > ms-rest-azure > async > lodash:
+        patched: '2020-06-06T20:24:33.061Z'
+    - vscode-azureextensionui > azure-arm-storage > ms-rest-azure > async > lodash:
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > @truffle/decoder > @truffle/decode-utils > web3-eth-abi > web3-utils > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > reselect-tree > esdoc > babel-generator > babel-types > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > reselect-tree > esdoc > babel-traverse > babel-types > lodash':
+        patched: '2020-06-06T20:24:33.061Z'
+    - '@truffle/debugger > reselect-tree > esdoc > ice-cap > cheerio > lodash':
+        patched: '2020-06-06T20:24:33.061Z'

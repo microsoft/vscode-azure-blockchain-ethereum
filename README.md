@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/microsoft/vscode-azure-blockchain-ethereum)
+
 # Blockchain Development Kit for Ethereum
 
 [![Version](https://vsmarketplacebadge.apphb.com/version/AzBlockchain.azure-blockchain.svg)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-logicapps) [![Installs](https://vsmarketplacebadge.apphb.com/installs/AzBlockchain.azure-blockchain.svg)](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain) [![Rating](https://vsmarketplacebadge.apphb.com/rating-star/AzBlockchain.azure-blockchain.svg)](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain#review-details) [![Build status](https://msazure.visualstudio.com/Blockchain/_apis/build/status/Blockchain-VS-Extensions/Blockchain-VS-Extension-Prod)](https://msazure.visualstudio.com/Blockchain/_build/latest?definitionId=71311)

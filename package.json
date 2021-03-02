@@ -90,6 +90,12 @@
         }
       }
     },
+    "snippets": [
+      {
+        "language": "solidity",
+        "path": "./snippets/ethereum-contracts-maths.json"
+      }
+    ],
     "commands": [
       {
         "command": "azureBlockchainService.generateMicroservicesWorkflows",

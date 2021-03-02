@@ -1,0 +1,210 @@
+{
+	"Pragma": {
+		"prefix": "prag",
+		"body": [
+			"",
+			"pragma solidity ${1| >=0.4.22 <0.7.0,^0.4.22,^0.5.0,^0.6.0|};",
+			"",
+			""
+		],
+		"description": "Pragma"
+	},
+	"Import": {
+		"prefix": "impo",
+		"body": [
+			"",
+			"",
+			"import \"./${1:file}.sol\";",
+			"",
+			"",
+			"",
+			""
+		],
+		"description": "import ./file.sol"
+	},
+	"Interface": {
+		"prefix": "interf",
+		"body": [
+			"",
+			"interface ${1:interfaceName} {",
+		  	"	function ${2} (${3});	",
+			"}",
+			"",
+			""
+		],
+		"description": "Interface"
+	},
+	"Contract": {
+		"prefix": "contr",
+		"body": [
+			"/**",
+			" * The ${1:contractName} contract ${2:does this and that...}",
+			" */",
+			"contract ${1:contractName} {",
+			"  constructor() public {",
+			"    ${3}",
+			"  }",
+			"}",
+			""
+		],
+		"description": "Contract Snippet"
+	},
+	"Function": {
+		"prefix": "func",
+		"body": [
+			"",
+			"function ${1:myFunction} ($2)${3|internal,external,public,private|} ${4:returns(${5|bool,uint,string,address|})}  {",
+			"    ${6}",
+			"}",
+			"",
+			""
+		],
+		"description": "Function Body"
+	},
+	"Event": {
+		"prefix": "evnt",
+		"body": [
+			"",
+			"event ${1:Pawned}(${2:address victim});",
+			"",
+			""
+		],
+		"description": "Event"
+	},
+	"Delegated": {
+		"prefix": "delegat",
+		"body": [
+			"",
+			"/**",
+			" * The ${1} contract allows a set of delegate accounts",
+			" * to perform special tasks such as admin tasks to the contract",
+			" */",
+			"contract ${1:Delegated} is Owned {",
+			"    mapping (address => bool) delegates;",
+			"    ",
+			"    modifier ${2:only_delegate} { require (msg.sender == owner || delegates[msg.sender]); _; }",
+			"    event DelegateChanged(address delegate, bool state);",
+			"    ",
+			"    function setDelegate(address _address, bool state) public only_owner { ",
+			"        if (state) delegates[_address] = true;",
+			"        else delete delegates[_address];",
+			"        DelegateChanged(_address, state);",
+			"    }",
+			"",
+			"    function isDelegate(address account) public constant",
+			"    returns (bool delegate)  {",
+			"        if (delegates[account] == true)",
+			"            return true;",
+			"        else",
+			"            return false;",
+			"    }",
+			"}",
+			"",
+			"",
+			"",
+			""
+		],
+		"description": "Delegated"
+	},
+	"Enum": {
+		"prefix": "enum",
+		"body": [
+			"enum ${1:Color} { ${2:Red}, ${3:Green} }"
+		],
+		"description": "Enum"
+	},
+	"Mapping": {
+		"prefix": "map",
+		"body": [
+			"",
+			"mapping (${1:address} => ${2:uint}) ${3:myMapping};",
+			"",
+			"",
+			""
+		],
+		"description": "Mapping"
+	},
+	"Modifier": {
+		"prefix": "mdfi",
+		"body": [
+			"",
+			"modifier ${1:name}(${2:uint _time}) { ",
+			"    require (${3:now >= _time}); ",
+			"    _; ",
+			"}",
+			"",
+			""
+		],
+		"description": "Modifier"
+	},
+	"Owned": {
+		"prefix": "ownd",
+		"body": [
+			"",
+			"/**",
+			" * The ${1} contract ensures that only the creator (deployer) of a ",
+			" * contract can perform certain tasks.",
+			" */",
+			"contract ${1:Owned} {",
+			"    address public owner = msg.sender;",
+			"    event OwnerChanged(address indexed old, address indexed current);",
+			"    modifier ${2:only_owner} { require(msg.sender == owner); _; }",
+			"    function setOwner(address _newOwner) ${2} public { OwnerChanged(owner, _newOwner); owner = _newOwner; }",
+			"}",
+			"",
+			"",
+			""
+		],
+		"description": "Owned"
+	},
+	"Paid": {
+		"prefix": "paid",
+		"body": [
+			"",
+			"/**",
+			" * The ${1} contract allows ensuring that function only",
+			" * run if the ${2} modifier has been called which",
+			" * has the effect of enforcing the payment and sending the change.",
+			" */",
+			"contract ${1:Paid} {",
+			"    event ${2:didPay} (address indexed who, uint price);",
+			"    modifier hasPaid (uint price) { ",
+			"        require(msg.value >= price);",
+			"        if (msg.value > price) {",
+			"            msg.sender.transfer(msg.value - price);",
+			"        } ",
+			"        didPay(msg.sender, price);",
+			"        _; ",
+			"    }",
+			"}",
+			"",
+			""
+		],
+		"description": "Paid"
+	},
+	"Require": {
+		"prefix": "req",
+		"body": [
+			"",
+			"",
+			"require (${1:msg.value > 0});",
+			"",
+			""
+		],
+		"description": "Require"
+	},
+	"struct": {
+		"prefix": "strct",
+		"body": [
+			"",
+			"struct ${1:Funder} {",
+			"    ${2:address addr};",
+			"    ${3:uint amount};",
+			"    ${4}",
+			"}",
+			"",
+			""
+		],
+		"description": "struct"
+	}
+}

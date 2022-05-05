@@ -1,4 +1,4 @@
-# Blockchain Development Kit for Ethereum
+# [DEPRECATED] Active at https://github.com/trufflesuite/vscode-ext   Blockchain Development Kit for Ethereum
 
 [![Version](https://vsmarketplacebadge.apphb.com/version/AzBlockchain.azure-blockchain.svg)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-logicapps) [![Installs](https://vsmarketplacebadge.apphb.com/installs/AzBlockchain.azure-blockchain.svg)](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain) [![Rating](https://vsmarketplacebadge.apphb.com/rating-star/AzBlockchain.azure-blockchain.svg)](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain#review-details) [![Build status](https://msazure.visualstudio.com/Blockchain/_apis/build/status/Blockchain-VS-Extensions/Blockchain-VS-Extension-Prod)](https://msazure.visualstudio.com/Blockchain/_build/latest?definitionId=71311)
 

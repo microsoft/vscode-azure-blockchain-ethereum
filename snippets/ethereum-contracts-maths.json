@@ -1,0 +1,119 @@
+{
+  // Place your snippets for javascriptreact here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  "Initial imp solidity Code": {
+    "prefix": "imp",
+    "body": [
+      "pragma solidity ^0.6.0;",
+      "",
+      "import \"./${3:imp_sol_file}.sol\";",
+      "",
+      "contract ${2:Name} is ${3:imp_sol_file}{",
+      " $4",
+      "}"
+    ],
+    "description": "Initial imp solidity Code"
+  },
+  "Maths Code": {
+    "prefix": "maths",
+    "body": [
+      "pragma solidity ^0.6.0;",
+      "",
+      "import \"@openzeppelin/contracts/Math/Math.sol\";",
+      "",
+      "contract ${1:contract_name}{",
+      "   uint256 public ${2:result} = Math.${3|max,min,average|}($4,$5);",
+      "}"
+    ],
+    "description": "Maths Code"
+  },
+  "Safe Math Code": {
+    "prefix": "mathSafe",
+    "body": [
+      "pragma solidity ^0.6.0;",
+      "",
+      "import \"@openzeppelin/contracts/Math/SafeMath.sol\";",
+      "",
+      "contract ${1:contract_name}{",
+      "   uint256 public ${2:result} = SafeMath.${3|add,sub,mul,div,mod|}($4,$5);",
+      "}"
+    ],
+    "description": "Safe Math Code"
+  },
+  "Signed Safe Math code": {
+    "prefix": "mathSafeSigned",
+    "body": [
+      "pragma solidity ^0.6.0;",
+      "",
+      "import \"@openzeppelin/contracts/Math/SignedSafeMath.sol\";",
+      "",
+      "contract ${1:contract_name}{",
+      "   uint256 public ${2:result} = SignedSafeMath.${3|add,sub,mul,div|}($4,$5);",
+      "}"
+    ],
+    "description": "Signed Safe Math code"
+  },
+  "add Math code": {
+    "prefix": "add",
+    "body": [
+      "uint256 public ${1:result} = ${2|SafeMath,SignedSafeMath|}.add($3,$4);",
+      "// if not imported import \"@openzeppelin/contracts/Math/${2|SafeMath,SignedSafeMath|}.sol\";"
+    ],
+    "description": "add Math code"
+  },
+  "mul Math code": {
+    "prefix": "mul",
+    "body": [
+      "uint256 public ${1:result} = ${2|SafeMath,SignedSafeMath|}.mul($3,$4);",
+      "// if not imported import \"@openzeppelin/contracts/Math/${2|SafeMath,SignedSafeMath|}.sol\";"
+    ],
+    "description": "mul Math code"
+  },
+  "div Math code": {
+    "prefix": "div",
+    "body": [
+      "uint256 public ${1:result} = ${2|SafeMath,SignedSafeMath|}.div($3,$4);",
+      "// if not imported import \"@openzeppelin/contracts/Math/${2|SafeMath,SignedSafeMath|}.sol\";"
+    ],
+    "description": "div Math code"
+  },
+  "sub Math code": {
+    "prefix": "sub",
+    "body": [
+      "uint256 public ${1:result} = ${2|SafeMath,SignedSafeMath|}.sub($3,$4);",
+      "// if not imported import \"@openzeppelin/contracts/Math/${2|SafeMath,SignedSafeMath|}.sol\";"
+    ],
+    "description": "sub Math code"
+  },
+  "max Math code": {
+    "prefix": "max",
+    "body": ["// import \"@openzeppelin/contracts/Math/Math.sol\";", "uint256 public ${1:result} = Math.max($2,$3);"],
+    "description": "max Math code"
+  },
+  "min Math code": {
+    "prefix": "min",
+    "body": [
+      "//if imported ignore it import \"@openzeppelin/contracts/Math/Math.sol\";",
+      "uint256 public ${1:result} = Math.min($2,$3);"
+    ],
+    "description": "min Math code"
+  },
+  "avg Math code": {
+    "prefix": "avg",
+    "body": [
+      "//if imported ignore it import \"@openzeppelin/contracts/Math/Math.sol\";",
+      "uint256 public ${1:result} = Math.avg($2,$3);"
+    ],
+    "description": "avg Math code"
+  },
+  "mod Math code": {
+    "prefix": "mod",
+    "body": [
+      "uint256 public ${1:result} = ${2:SafeMath}.mod($3,$4);",
+      "// if not imported import \"@openzeppelin/contracts/Math/SafeMath.sol\";"
+    ],
+    "description": "mod Math code"
+  }
+}

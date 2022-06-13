@@ -1,0 +1,54 @@
+{
+	"Uniswap Token": {
+        "prefix": "uniswap-token",
+        "scope": "javascript",
+		"body": [
+			"import { ChainId, Token } from '@uniswap/sdk';",
+			"",
+			"$0const ${1:my_token} = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')"
+		],
+		"description": "The Uniswap Token entity represents an ERC-20 token at a specific address on a specific chain."
+    },
+    "Uniswap Pair": {
+        "prefix": "uniswap-pair",
+        "scope": "javascript",
+		"body": [
+			"import { ChainId, Token, TokenAmount, Pair } from '@uniswap/sdk';",
+			"",
+            "const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')",
+            "const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')",
+            "",
+            "$0const ${1:my_pair} = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NO, '1000000000000000000'))"
+		],
+		"description": "The Uniswap Pair entity represents a Uniswap pair with a balance of each of its pair tokens."
+    },
+    "Uniswap Route": {
+        "prefix": "uniswap-route",
+        "scope": "javascript",
+		"body": [
+			"import { ChainId, Token, TokenAmount, Pair, Route } from '@uniswap/sdk';",
+			"",
+            "const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')",
+            "const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')",
+            "const HOT_NOT = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))",
+            "",
+            "$0const ${1:my_route} = new Route([HOT_NOT], NOT)"
+		],
+		"description": "The Uniswap Route entity represents one or more ordered Uniswap pairs with a fully specified path from input token to output token."
+    },
+    "Uniswap Trade": {
+        "prefix": "uniswap-trade",
+        "scope": "javascript",
+		"body": [
+			"import { ChainId, Token, TokenAmount, Pair, TradeType, Route } from '@uniswap/sdk';",
+			"",
+            "const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')",
+            "const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')",
+            "const HOT_NOT = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))",
+            "const NOT_TO_HOT = new Route([HOT_NOT], NOT)",
+            "",
+            "$0const ${1:my_trade} = new Trade(NOT_TO_HOT, new TokenAmount(NOT, '1000000000000000'), TradeType.EXACT_INPUT)"
+		],
+		"description": "The Uniswap Trade entity represents a fully specified trade along a route. This entity supplies all the information necessary to craft a router transaction."
+    }
+}

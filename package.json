@@ -89,6 +89,12 @@
         }
       }
     },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/uniswap.json"
+      }
+    ],
     "commands": [
       {
         "command": "azureBlockchainService.generateMicroservicesWorkflows",
